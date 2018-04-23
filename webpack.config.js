@@ -4,9 +4,9 @@ const path = require('path');
 
 const webpack = require('webpack');
 
-const isWebpackDevServer = process.argv.filter(a => path.basename(a) === 'webpack-dev-server').length;
+const isWebpackDevServer = process.argv.some(a => path.basename(a) === 'webpack-dev-server');
 
-const isWatch = process.argv.filter(a => a === '--watch').length
+const isWatch = process.argv.some(a => a === '--watch');
 
 const plugins =
   isWebpackDevServer || !isWatch ? [] : [
