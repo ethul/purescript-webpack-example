@@ -5,7 +5,7 @@ Example project using PureScript with webpack.
 ## Installation
 
 ```bash
-bower install
+spago install
 npm install
 ```
 
@@ -29,7 +29,7 @@ npm start
 To test this in the browser with the webpack-dev-server.
 
 ```bash
-bower install
+spago install
 
 npm install
 
@@ -55,18 +55,17 @@ However, if you want to use globally installed binaries, this means that you'll
 have to take care of all binary dependencies yourself. Right now, this includes
 having in your `$PATH`:
 
-* `psc` that comes from `purescript` (`haskellPackages.purescript` on Nix)
-* `psa` that comes from `purescript-psa` (on Nix, you'll have to install it
-yourself via `node2nix -i node-packages.json` and `nix-env -f default.nix -iA
-purescript.psa`; node-packages.json is a file you create yourself containing
-`[ "purescript-psa" ]`). You can remove the dependency on `psa` by changing `psc: 'psa'`
-to `psc: 'psc'` inside `webpack.config.js`. `psa` just provides clearer compilation
-messages compared to `psc`
-* `webpack` (on Nix, `nodePackages.webpack`)
-* `node` that comes from `nodejs`
+- `psc` that comes from `purescript` (`haskellPackages.purescript` on Nix)
+- `psa` that comes from `purescript-psa` (on Nix, you'll have to install it
+  yourself via `node2nix -i node-packages.json` and `nix-env -f default.nix -iA purescript.psa`; node-packages.json is a file you create yourself containing
+  `[ "purescript-psa" ]`). You can remove the dependency on `psa` by changing `psc: 'psa'`
+  to `psc: 'psc'` inside `webpack.config.js`. `psa` just provides clearer compilation
+  messages compared to `psc`
+- `webpack` (on Nix, `nodePackages.webpack`)
+- `node` that comes from `nodejs`
 
 ## Additional examples
 
- - [Fast rebuilds](https://github.com/ethul/purescript-webpack-example/tree/fast-rebuilds)
- - [Psc package](https://github.com/ethul/purescript-webpack-example/tree/psc-package)
- - [Source maps](https://github.com/ethul/purescript-webpack-example/tree/source-maps)
+- [Fast rebuilds](https://github.com/ethul/purescript-webpack-example/tree/fast-rebuilds)
+- [Psc package](https://github.com/ethul/purescript-webpack-example/tree/psc-package)
+- [Source maps](https://github.com/ethul/purescript-webpack-example/tree/source-maps)
