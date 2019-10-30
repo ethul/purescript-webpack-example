@@ -27,7 +27,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1",
+    "webpack-dev-server": "^3.1.11",
     "wrappy": "^1.0.2"
   }
 }
