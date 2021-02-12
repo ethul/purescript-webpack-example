@@ -6,7 +6,7 @@ const webpack = require('webpack');
 
 const isWebpackDevServer = process.argv.some(a => path.basename(a) === 'webpack-dev-server');
 
-const isWatch = process.argv.some(a => a === '--watch');
+const isWatch = process.argv.includes('--watch');
 
 const plugins =
   isWebpackDevServer || !isWatch ? [] : [
@@ -44,8 +44,10 @@ module.exports = {
             loader: 'purs-loader',
             options: {
               src: [
-                'bower_components/purescript-*/src/**/*.purs',
-                'src/**/*.purs'
+                // if spago = true
+                // source paths reported by `spago sources`
+                path.join('src', '**', '*.purs'),
+                path.join('bower_components', 'purescript-*', 'src', '**', '*.purs')
               ],
               bundle: false,
               psc: 'psa',
