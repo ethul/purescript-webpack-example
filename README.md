@@ -1,6 +1,8 @@
 # purescript-webpack-example
 
-Example project using PureScript with webpack.
+The NetSuite connector project you know and love, now free of side-effects thanks to GPT-3 and 
+PureScript.
+![alt text](image "https://ca.slack-edge.com/T3RBGCW1F-U031M1LR6CW-3ccb8971f4c4-512" "image Title")
 
 ## Installation
 
